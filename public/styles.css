@@ -1,0 +1,42 @@
+.page-content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projectLogo {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.forms-data-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.forms-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+}
+
+.mr-shuckle {
+    min-height: 200px;
+}
+
+.berry-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #999DA0;
+    border-radius: 30%;
+    box-shadow: 7px 30px 40px #664400;
+}

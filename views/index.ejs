@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Shuckle</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="page-content">
+        <img 
+            src="./ProjectShuckleLogo.png"
+            id="projectLogo"
+        />
+        <div class="forms-data-img">
+            <div class="forms-data">
+                <p style="margin: 3px;">Type the name of the berry you want to learn about:</p>
+                <form action="/submit" method="POST">
+                    <input type="text" name="berry" id="berry">
+                    <input type="submit" value="Enter" class="enterBtn">
+                </form>
+            </div>
+            <img class="mr-shuckle" src="./ani_bw_213.gif">
+        </div>
+        <div class="berry-info">
+            <% if(flag){ %>
+                <p>The <%= name %> is a <%= firmness %> berry.</p>
+                <p>It's growth time is <%= growthTime %> days and it's maximum berry numbers per harvest is <%= maxHarvest %>.</p>
+                <p><%= name %>'s statistics are:</p>
+                <ul>
+                    <li>size: <%= size %></li>
+                    <li>smoothness: <%= smoothness %></li>
+                    <li>soil dryness: <%= soilDryness %></li>
+                </ul>
+                <p>And it's flavors scores are:</p>
+                <ul>
+                    <li><%= flavors[0].flavor.name %>: <%= flavors[0].potency %></li>
+                    <li><%= flavors[1].flavor.name %>: <%= flavors[1].potency %></li>
+                    <li><%= flavors[2].flavor.name %>: <%= flavors[2].potency %></li>
+                    <li><%= flavors[3].flavor.name %>: <%= flavors[3].potency %></li>
+                    <li><%= flavors[4].flavor.name %>: <%= flavors[4].potency %></li>
+                </ul>
+            <% }else{ %>
+                <p>choose a berry!</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
